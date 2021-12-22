@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.ScrollButton {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  z-index: 900;
+  background: @primary-color;
+  color: @control-bg;
+
+  &.is-visible {
+    display: block;
+  }
+
+  &:hover {
+    background: var(--button-primary-bg-hover, #03915d);
+  }
+}

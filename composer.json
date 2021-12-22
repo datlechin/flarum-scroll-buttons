@@ -1,0 +1,46 @@
+{
+    "name": "datlechin/flarum-scroll-buttons",
+    "description": "Add scroll up and scroll down buttons.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Ngo Quoc Dat",
+            "email": "datlechin@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/datlechin/flarum-scroll-buttons",
+        "forum": "https://discuss.flarum.org/d/"
+    },
+    "homepage": "https://vieit.net",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://nhantien.momo.vn/0372124043"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Datlechin\\ScrollButtons\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Scroll Buttons",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-angle-double-up",
+                "backgroundColor": "#D3241C",
+                "color": "#fff"
+            }
+        }
+    }
+}
