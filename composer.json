@@ -33,9 +33,11 @@
             "title": "Scroll Buttons",
             "category": "feature",
             "icon": {
-                "name": "fas fa-angle-double-up",
+                "image": "icon.svg",
+                "color": "#fff",
                 "backgroundColor": "#D3241C",
-                "color": "#fff"
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
             }
         }
     }

@@ -2,9 +2,16 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/datlechin/flarum-scroll-buttons.svg)](https://packagist.org/packages/datlechin/flarum-scroll-buttons) [![Total Downloads](https://img.shields.io/packagist/dt/datlechin/flarum-scroll-buttons.svg)](https://packagist.org/packages/datlechin/flarum-scroll-buttons)
 
-A [Flarum](http://flarum.org) extension. Add scroll up and scroll down buttons.
+A [Flarum](http://flarum.org) extension. Add scroll to top and scroll to bottom buttons.
 
-![](https://github.com/datlechin/static/blob/main/Screenshot%202021-12-22%20181721.png?raw=true)
+### Features:
+
+- You can enable/disable scroll to top or scroll to bottom buttons.
+- Custom css for scrollbars.
+
+![](https://github.com/datlechin/static/blob/main/datlechin-flarum-scroll-buttons.png.png?raw=true)
+___
+![](https://github.com/datlechin/static/blob/main/datlechin-flarum-scroll-buttons-admin.png?raw=true)
 
 ## Installation
 
@@ -21,9 +28,6 @@ composer update datlechin/flarum-scroll-buttons:"*"
 php flarum migrate
 php flarum cache:clear
 ```
-
-### Roadmap:
-A button to scroll to bottom
 
 ## Links
 

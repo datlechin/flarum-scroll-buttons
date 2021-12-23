@@ -1,7 +1,5 @@
 import Component from 'flarum/common/Component';
 import Button from 'flarum/common/components/Button';
-import icon from 'flarum/helpers/icon';
-import extractText from 'flarum/utils/extractText';
 import classList from 'flarum/utils/classList';
 
 export default class ScrollButton extends Component {
@@ -14,26 +12,53 @@ export default class ScrollButton extends Component {
   }
 
   view() {
+    const className = classList('Button', 'Button--icon', 'ScrollButtons-button');
+    const scrollTopIcon = 'fas fa-angle-double-up';
+    const scrollBottomIcon = 'fas fa-angle-double-down';
+    const scrollToTopButton = app.forum.attribute('scrollToTopButton')
+      ? Button.component({
+          className,
+          icon: scrollTopIcon,
+          onclick: () => {
+            this.scrollToTop();
+          },
+        })
+      : '';
+    const scrollToBottomButton = app.forum.attribute('scrollToBottomButton')
+      ? Button.component({
+          className,
+          icon: scrollBottomIcon,
+          onclick: () => {
+            this.scrollToBottom();
+          },
+        })
+      : '';
+
     return (
-      Button.component({
-        icon: 'fas fa-angle-double-up',
-        className: 'Button Button--icon ScrollButton',
-        onclick: () => {
-          this.scrollToTop();
-        }
-      })
+      <>
+        {scrollToTopButton}
+        {scrollToBottomButton}
+      </>
     );
   }
 
   scroll() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      this.element.classList.add('is-visible');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const scrollButtonsClass = document.getElementsByClassName('ScrollButtons')[0];
+
+    if (scrollTop > 0 && scrollTop < maxScroll) {
+      scrollButtonsClass.classList.add('is-visible');
     } else {
-      this.element.classList.remove('is-visible');
+      scrollButtonsClass.classList.remove('is-visible');
     }
   }
 
   scrollToTop() {
     window.scrollTo(0, 0);
+  }
+
+  scrollToBottom() {
+    window.scrollTo(0, document.body.scrollHeight);
   }
 }

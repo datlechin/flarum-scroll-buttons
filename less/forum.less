@@ -2,20 +2,37 @@ html {
   scroll-behavior: smooth;
 }
 
-.ScrollButton {
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: @control-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: @secondary-color;
+}
+
+.ScrollButtons {
   display: none;
   position: fixed;
-  bottom: 50px;
-  right: 20px;
+  bottom: 60px;
+  right: 7px;
   z-index: 900;
-  background: @primary-color;
-  color: @control-bg;
+
+  .ScrollButtons-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
 
   &.is-visible {
     display: block;
-  }
-
-  &:hover {
-    background: var(--button-primary-bg-hover, #03915d);
+    opacity: 1;
   }
 }
