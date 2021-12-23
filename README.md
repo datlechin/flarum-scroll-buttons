@@ -4,6 +4,8 @@
 
 A [Flarum](http://flarum.org) extension. Add scroll up and scroll down buttons.
 
+![](https://github.com/datlechin/static/blob/main/Screenshot%202021-12-22%20181721.png?raw=true)
+
 ## Installation
 
 Install with composer:
@@ -20,8 +22,11 @@ php flarum migrate
 php flarum cache:clear
 ```
 
+### Roadmap:
+A button to scroll to bottom
+
 ## Links
 
 - [Packagist](https://packagist.org/packages/datlechin/flarum-scroll-buttons)
 - [GitHub](https://github.com/datlechin/flarum-scroll-buttons)
-- [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
+- [Discuss](https://discuss.flarum.org/d/29716)
