@@ -13,8 +13,8 @@ export default class ScrollButton extends Component {
 
   view() {
     const className = classList('Button', 'Button--icon', 'ScrollButtons-button');
-    const scrollTopIcon = 'fas fa-angle-double-up';
-    const scrollBottomIcon = 'fas fa-angle-double-down';
+    const scrollTopIcon = app.forum.attribute('scrollToTopIcon') || 'fas fa-angle-double-up';
+    const scrollBottomIcon = app.forum.attribute('scrollToBottomIcon') || 'fas fa-angle-double-down';
     const scrollToTopButton = app.forum.attribute('scrollToTopButton')
       ? Button.component({
           className,

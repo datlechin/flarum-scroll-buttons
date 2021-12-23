@@ -22,5 +22,7 @@ return [
     new Extend\Locales(__DIR__ . '/locale'),
     (new Extend\Settings)
         ->serializeToForum('scrollToTopButton', 'datlechin-scroll-buttons.scroll-to-top-button', 'boolval')
-        ->serializeToForum('scrollToBottomButton', 'datlechin-scroll-buttons.scroll-to-bottom-button', 'boolval'),
+        ->serializeToForum('scrollToBottomButton', 'datlechin-scroll-buttons.scroll-to-bottom-button', 'boolval')
+        ->serializeToForum('scrollToTopIcon', 'datlechin-scroll-buttons.scroll-to-top-icon')
+        ->serializeToForum('scrollToBottomIcon', 'datlechin-scroll-buttons.scroll-to-bottom-icon')
 ];
