@@ -1,6 +1,12 @@
-vendor
+/vendor
 composer.lock
-node_modules
-tests
-yarn.lock
-js/dist/*
+composer.phar
+
+.DS_Store
+Thumbs.db
+tests/.phpunit.result.cache
+/tests/integration/tmp
+.vagrant
+.idea/*
+.vscode
+js/coverage-ts
