@@ -17,12 +17,17 @@ return [
     (new Extend\Frontend('forum'))
         ->js(__DIR__ . '/js/dist/forum.js')
         ->css(__DIR__ . '/less/forum.less'),
+
     (new Extend\Frontend('admin'))
         ->js(__DIR__ . '/js/dist/admin.js'),
+
     new Extend\Locales(__DIR__ . '/locale'),
+
     (new Extend\Settings)
         ->serializeToForum('scrollToTopButton', 'datlechin-scroll-buttons.scroll-to-top-button', 'boolval')
         ->serializeToForum('scrollToBottomButton', 'datlechin-scroll-buttons.scroll-to-bottom-button', 'boolval')
         ->serializeToForum('scrollToTopIcon', 'datlechin-scroll-buttons.scroll-to-top-icon')
         ->serializeToForum('scrollToBottomIcon', 'datlechin-scroll-buttons.scroll-to-bottom-icon')
+        ->default('datlechin-scroll-buttons.scroll-to-top-button', true)
+        ->default('datlechin-scroll-buttons.scroll-to-bottom-button', true)
 ];
