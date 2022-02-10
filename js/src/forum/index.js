@@ -8,6 +8,6 @@ app.initializers.add('datlechin/flarum-scroll-buttons', () => {
     const div = document.createElement('div');
     div.classList.add('ScrollButtons');
     app.initializers.has('acpl/mobile-tab') || app.initializers.has('itnt-uitab') ? div.classList.add('has-MobileTab') : null;
-    m.mount(document.body.appendChild(div), ScrollButtons);
+    m.mount(document.querySelector('.App-content').appendChild(div), ScrollButtons);
   });
 });

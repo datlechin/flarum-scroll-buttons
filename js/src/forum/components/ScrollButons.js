@@ -1,7 +1,6 @@
 import Component from 'flarum/common/Component';
 import Button from 'flarum/common/components/Button';
 import classList from 'flarum/utils/classList';
-
 export default class ScrollButton extends Component {
   oninit(vnode) {
     super.oninit(vnode);
@@ -55,10 +54,18 @@ export default class ScrollButton extends Component {
   }
 
   scrollToTop() {
-    window.scrollTo(0, 0);
+    if (app.current.get('routeName') === 'discussion.near') {
+      app.current.data.stream.goToFirst();
+    } else {
+      window.scrollTo(0, 0);
+    }
   }
 
   scrollToBottom() {
-    window.scrollTo(0, document.body.scrollHeight);
+    if (app.current.get('routeName') === 'discussion.near') {
+      app.current.data.stream.goToLast();
+    } else {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
   }
 }
