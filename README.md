@@ -25,7 +25,6 @@ composer require datlechin/flarum-scroll-buttons:"*"
 
 ```sh
 composer update datlechin/flarum-scroll-buttons:"*"
-php flarum migrate
 php flarum cache:clear
 ```
 

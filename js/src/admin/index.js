@@ -7,28 +7,14 @@ app.initializers.add('datlechin/flarum-scroll-buttons', () => {
     .for('datlechin-scroll-buttons')
     .registerSetting({
       setting: 'datlechin-scroll-buttons.scroll-to-top-button',
-      label: translate('scroll_to_top.label'),
-      help: translate('scroll_to_top.help'),
+      label: translate('scroll_to_top_label'),
+      help: translate('scroll_to_top_help'),
       type: 'boolean',
-    })
-    .registerSetting({
-      setting: 'datlechin-scroll-buttons.scroll-to-top-icon',
-      label: translate('scroll_to_top.icon.label'),
-      help: translate('scroll_to_top.icon.help'),
-      type: 'text',
-      placeholder: 'fas fa-angle-double-up',
     })
     .registerSetting({
       setting: 'datlechin-scroll-buttons.scroll-to-bottom-button',
-      label: translate('scroll_to_bottom.label'),
-      help: translate('scroll_to_bottom.help'),
+      label: translate('scroll_to_bottom_label'),
+      help: translate('scroll_to_bottom_help'),
       type: 'boolean',
-    })
-    .registerSetting({
-      setting: 'datlechin-scroll-buttons.scroll-to-bottom-icon',
-      label: translate('scroll_to_bottom.icon.label'),
-      help: translate('scroll_to_bottom.icon.help'),
-      type: 'text',
-      placeholder: 'fas fa-angle-double-down',
     });
 });

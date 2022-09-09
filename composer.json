@@ -9,7 +9,7 @@
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
-        "flarum/core": "^1.0.0"
+        "flarum/core": "^1.4"
     },
     "authors": [
         {
@@ -22,7 +22,7 @@
         "source": "https://github.com/datlechin/flarum-scroll-buttons",
         "forum": "https://discuss.flarum.org/d/29716"
     },
-    "homepage": "https://ngoquocdat.com",
+    "homepage": "https://ngoquocdat.dev",
     "autoload": {
         "psr-4": {
             "Datlechin\\ScrollButtons\\": "src/"
