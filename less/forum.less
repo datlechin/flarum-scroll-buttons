@@ -1,36 +1,31 @@
-html {
-  scroll-behavior: smooth;
-}
-
 .ScrollButtons {
-  display: none;
   position: fixed;
   bottom: 60px;
-  right: 7px;
-  z-index: 900;
+  right: 12px;
+  z-index: calc(~"var(--zindex-header) + 5");
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
 
-  .ScrollButtons-button {
-    display: block;
-    width: 40px;
-    height: 40px;
-    opacity: 0.4;
-    background: @secondary-color;
-    color: #fff;
-
-
-    &:not(:last-child) {
-      margin-bottom: 5px;
-    }
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
   }
 
   @media @phone {
-    &.has-MobileTab {
-      bottom: 80px;
-    }
+    bottom: 70px;
+    right: 8px;
   }
+}
 
-  &.is-visible {
-    display: block;
-    opacity: 1;
+.ScrollButtons-button {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--border-radius);
+  .Button--color(#fff, @secondary-color);
+
+  & + & {
+    margin-top: 4px;
   }
 }
